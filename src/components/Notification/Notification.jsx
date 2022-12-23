@@ -1,14 +1,11 @@
-import { Component } from 'react';
-import s from './Notification.module.scss'
 import PropTypes from 'prop-types';
+import s from './Notification.module.scss';
 
-export default class Notification extends Component {
-  render() {
-    return (
-      <p className={s.text}>{this.props.message}</p>
-    );
-  };
+const Notification = ({ message }) => {
+  return <p className={s.text}>{message}</p>;
 };
+
+export default Notification;
 
 Notification.propTypes = {
   message: PropTypes.string.isRequired,
